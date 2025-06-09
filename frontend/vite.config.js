@@ -9,4 +9,7 @@ export default defineConfig({
     port: 10000,      // Set the port Render uses
     strictPort: true, // Ensures Vite fails if the port is taken
   },
+  preview: {
+    allowedHosts: ['videochatapp-5nuj.onrender.com'], // Allow the Render URL
+  }
 })
