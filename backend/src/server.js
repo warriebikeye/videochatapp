@@ -22,12 +22,15 @@ const __dirname = path.resolve();
   //})
 //);
 
-app.use(
-  cors({
-    origin: true, // dynamically reflects the request origin
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "https://videochatapp-5nuj.onrender.com" // replace with your frontend domain
+  ],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 
 app.use(express.json());
